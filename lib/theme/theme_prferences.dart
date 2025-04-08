@@ -109,17 +109,17 @@ ThemeData getAppTheme(BuildContext context, {bool isDark = false}) => ThemeData(
             primary: Colors.white,
 
             secondary: ColorConstant.yellow,
-            tertiary: ColorConstant.yellow,
+            tertiary: ColorConstant.bgColorLight,
             error: ColorConstant.yellow,
-            surface: ColorConstant.yellow,
+            surface: ColorConstant.bgColorDark,
             surfaceTint: ColorConstant.primary,
           )
           : const ColorScheme.light(
             primary: ColorConstant.primary,
             secondary: ColorConstant.secondary,
-            tertiary: ColorConstant.tertiary,
+            tertiary: ColorConstant.bgColorDark,
             error: ColorConstant.error,
-            surface: Colors.white,
+            surface: ColorConstant.bgColorLight, // bg color
             surfaceTint: Colors.transparent,
           ),
 );

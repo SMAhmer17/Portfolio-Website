@@ -1,5 +1,6 @@
 import 'package:ahmerportfolio/providers/theme_provider.dart';
 import 'package:ahmerportfolio/theme/theme_prferences.dart';
+import 'package:ahmerportfolio/view/main_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
             darkTheme: getAppTheme(context, isDark: true),
             debugShowCheckedModeBanner: false,
             themeMode: context.watch<ThemeProvider>().themeMode,
-            home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            home: const MainPage(),
           );
         },
       ),
@@ -58,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -72,12 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-
+            Text(width.toString()),
             CupertinoSwitch(
               value:
                   context
                       .watch<ThemeProvider>()
-                      .isLightMode, // Watch for changes
+                      .isLightMode, 
               onChanged: (v) {
                 // Directly toggle theme mode using the provider without setState
                 context.read<ThemeProvider>().toggleThemeMode(isLightMode: v);

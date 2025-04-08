@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ColorConstant {
@@ -64,4 +63,18 @@ class ColorConstant {
 
   static const Color lightGreyBorder = Color(0xFFE8E6EA);
   static const Color lightGrayTextColor = Color(0xFF878787);
+
+  //==================== Light Theme Starts ====================//
+
+  static const Color bgColorLight = Color(0xFFFFFFFF);
+  static const Color infoContainerBgLight = Color(0xFF878787);
+
+  //==================== Light Theme End ====================//
+
+  //==================== Dark Theme Starts ====================//
+
+  static const Color bgColorDark = Color(0xFF030712);
+  static const Color infoContainerBgDark = Color(0xFF878787);
+
+  //==================== Dark Theme End ====================//
 }
